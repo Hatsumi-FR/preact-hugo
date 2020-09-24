@@ -21,3 +21,4 @@ steps:
         {{#success build.status}}
         Go > JS
         {{/success}}
+        by {{build.author}}
