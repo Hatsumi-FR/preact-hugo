@@ -22,3 +22,10 @@ steps:
         Go > JS
         {{/success}}
         by {{build.author}}
+  - name: publish
+    image: plugins/gh-pages
+    settings:
+      username: Hatsumi-FR
+      password:
+        from_secret: PW_GH
+      pages_directory: test-ci/dist
