@@ -12,11 +12,12 @@ steps:
       - npm install
   - name: notify
     image: plugins/slack
-    webhook:
-      from_secret : SLACK_WEBHOOKS
-    channel: drone-cli
-    username: Gopher
-    template: >
-      {{#success build.status}}
-      Go > JS
-      {{/success}}
+    settings:
+      webhook:
+        from_secret : SLACK_WEBHOOKS
+      channel: drone-cli
+      username: Gopher
+      template: >
+        {{#success build.status}}
+        Go > JS
+        {{/success}}
