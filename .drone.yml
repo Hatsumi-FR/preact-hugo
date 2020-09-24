@@ -12,8 +12,8 @@ steps:
       - npm install
   - name: notify
     image: plugins/slack
-    channel: drone-ci
     settings:
+      channel: drone-ci
       webhook:
         from_secret : SLACK_WEBHOOKS
       username: Gopher
