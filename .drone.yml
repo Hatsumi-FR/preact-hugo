@@ -10,10 +10,9 @@ steps:
       - preact create ${DRONE_REPO}#${DRONE_COMMIT} app
       - cd app
       - npm install
-      - npm run build
   - notify:
       image: plugins/slack
-      webhook: https://hooks.slack.com/services/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
+      secrets: [ slack_webhooks ]
       channel: drone-cli
       username: Gopher
       template: >
